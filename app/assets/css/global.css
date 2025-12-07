@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-primary: #FF27AD;
+  --color-secondary: #0099A8;
+  --color-neutral: #F2F0FF;
+  --color-white: #FFFFFF;
+  --color-gray: #8493A8;
+  --color-blue: #00106B;
+  --color-error: #FA4C44;
+  --color-dark-gray: #505357;
+  --color-light-gray: #ECECEC80;
+
+  /* Border Radius */
+  --radius-xs: 0.125rem;  /* 2px */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.375rem;  /* 6px */
+  --radius-lg: 0.5rem;    /* 8px */
+  --radius-xl: 0.75rem;   /* 12px */
+  --radius-2xl: 1rem;     /* 16px */
+
+  /* Font Sizes */
+  --font-xxs: 0.75rem;     /* 12px */
+  --font-xs: 0.8125rem;    /* 13px */
+  --font-sm: 0.875rem;     /* 14px */
+  --font-md: 1rem;         /* 16px */
+  --font-lg: 1.125rem;     /* 18px */
+  --font-xl: 1.25rem;      /* 20px */
+  --font-2xl: 1.5rem;      /* 24px */
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}
+
+@theme inline {
+  /* Colors */
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-neutral: var(--color-neutral);
+  --color-white: var(--color-white);
+  --color-gray: var(--color-gray);
+  --color-blue: var(--color-blue);
+  --color-error: var(--color-error);
+  --color-dark-gray: var(--color-dark-gray);
+  --color-light-gray: var(--color-light-gray);
+
+  /* Border Radius */
+  --radius-xs: var(--radius-xs);   /* 2px */
+  --radius-sm: var(--radius-sm);   /* 4px */
+  --radius-md: var(--radius-md);   /* 6px */
+  --radius-lg: var(--radius-lg);   /* 8px */
+  --radius-xl: var(--radius-xl);   /* 12px */
+  --radius-2xl: var(--radius-2xl); /* 16px */
+
+  /* Font Sizes */
+  --text-xxs: var(--font-xxs);   /* 12px */
+  --text-xs: var(--font-xs);     /* 13px */
+  --text-sm: var(--font-sm);     /* 14px */
+  --text-md: var(--font-md);     /* 16px */
+  --text-lg: var(--font-lg);     /* 18px */
+  --text-xl: var(--font-xl);     /* 20px */
+  --text-2xl: var(--font-2xl);   /* 24px */
+
+  /* Font Weights */
+  --font-normal: var(--weight-regular);
+  --font-medium: var(--weight-medium);
+  --font-semibold: var(--weight-semibold);
+  --font-bold: var(--weight-bold);
+}
+
+body {
+  color: var(--color-dark-gray);
+  background-color: var(--color-white);
+  font-size: var(--font-md);
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+}
