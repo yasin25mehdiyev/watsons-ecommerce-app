@@ -15,8 +15,11 @@
 
     <!-- Promo Banner Section -->
     <PromoBannerSection />
+
+    <!-- Featured Category Section -->
+    <FeaturedCategorySection />
 </template>
 
 <script setup lang="ts">
-import { FeaturedProductSection, NewsletterSection, PromoBannerSection } from '@/pages/sections'
+import { FeaturedProductSection, NewsletterSection, PromoBannerSection, FeaturedCategorySection } from '@/pages/sections'
 </script>
