@@ -33,7 +33,7 @@
             </p>
           </div>
 
-          <button class="mt-6 bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-md 
+          <button class="cursor-pointer mt-6 bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-md 
                    font-semibold uppercase shadow-lg transition-all duration-300 
                    hover:scale-105 active:scale-95">
             SHOP NOW
