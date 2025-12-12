@@ -53,17 +53,29 @@
           </div>
         </div>
 
-        <button class="md:hidden text-gray-600 text-xl">
-          <!-- <i class="fas fa-bars"></i> -->
+        <button class="md:hidden text-gray-600 text-xl" @click="openMobileMenu">
           <Store />
         </button>
       </div>
     </div>
   </header>
+
+  <MobileNavigation ref="mobileMenuRef" />
 </template>
 
 <script lang="ts" setup>
 import { Store } from '@/assets/icons'
 import logoImage from '@/assets/image/logo.png'
 import userImage from '@/assets/image/user.jpg'
+import MobileNavigation from '@/components/layout/navbar/mobile-navbar.vue'
+
+import { ref } from 'vue'
+
+interface MobileMenuRefProps {
+  openMenu: () => void
+}
+
+const mobileMenuRef = ref<MobileMenuRefProps | null>(null)
+
+const openMobileMenu = () => mobileMenuRef.value?.openMenu()
 </script>
