@@ -2,21 +2,21 @@
   <div class="md:hidden divide-y border-b border-watsons-smoke">
 
     <div v-for="section in sections" :key="section.title">
-      <button class="w-full flex justify-between items-center py-4 font-medium text-watsons-coal"
+      <button class="cursor-pointer w-full flex justify-between items-center py-4 font-medium text-watsons-coal"
         @click="toggle(section.title)">
         {{ section.title }}
         <Store :class="cn('transition-transform duration-300', { 'rotate-180': open === section.title })" />
       </button>
 
       <ul :class="cn(
-        'overflow-hidden transition-all duration-300 ease-in-out text-sm text-watsons-graphene',
+        'cursor-pointer overflow-hidden transition-all duration-300 ease-in-out text-sm text-watsons-graphene',
         {
           'max-h-40 opacity-100 pb-4': open === section.title,
           'max-h-0 opacity-0 pb-0': open !== section.title
         }
       )">
         <li v-for="item in section.items" :key="item" class="py-1">
-          <a href="#">{{ item }}</a>
+          <a href="#" class="hover:underline">{{ item }}</a>
         </li>
       </ul>
     </div>

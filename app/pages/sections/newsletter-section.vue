@@ -16,8 +16,9 @@
           <input type="email" placeholder="Your email address" class="w-full md:w-[412px] px-4 py-3 border border-gray-300 rounded-lg 
                    focus:outline-none focus:border-watsons-teal text-sm" />
 
-          <button class="bg-watsons-pink text-white px-6 py-3 rounded-lg font-medium 
-                   hover:bg-pink-600 transition-colors whitespace-nowrap text-sm md:text-base">
+          <button class="cursor-pointer bg-watsons-pink text-white px-6 py-3 rounded-lg font-medium 
+                   hover:bg-pink-600  whitespace-nowrap text-sm md:text-base transition-all duration-300 
+                   hover:scale-105 active:scale-95">
             SUBSCRIBE
           </button>
         </div>
