@@ -1,9 +1,16 @@
 <template>
-  <footer :class="cn('bg-gray-800', 'text-white text-center', 'p-5')">
-    <p :class="cn('text-sm text-light-gray', 'font-medium')">Copyright © 2023 - All rights reserved</p>
+  <footer class="pt-8 md:pt-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <MobileFooter />
+      <DesktopFooter />
+    </div>
+
+    <FooterBottom />
   </footer>
 </template>
 
-<script lang="ts" setup>
-import { cn } from '@/utils'
+<script setup lang="ts">
+import MobileFooter from './mobile-footer.vue'
+import DesktopFooter from './desktop-footer.vue'
+import FooterBottom from './footer-bottom.vue'
 </script>
