@@ -12,8 +12,7 @@
       <!-- Header -->
       <div class=" flex items-center p-4 border-b bg-watsons-titan">
         <button @click="closeMenu">
-          <!-- <i class="fas fa-times text-2xl text-watsons-graphene font-extrabold"></i> -->
-          <Store class="text-2xl text-watsons-graphene font-extrabold" />
+          <Close class="text-2xl text-watsons-graphene font-extrabold" />
         </button>
 
         <span class="ml-auto text-lg font-medium text-watsons-coal">
@@ -27,8 +26,7 @@
 
           <li v-for="item in menuItems" :key="item.key" class="p-4">
             <button class="w-full flex items-center">
-              <!-- <i class="fas fa-chevron-left text-watsons-graphene"></i> -->
-              <Store class="text-watsons-graphene" />
+              <ArrowLeft class="text-watsons-graphene" />
               <span class="ml-auto text-lg text-watsons-coal">
                 {{ item.label }}
               </span>
@@ -42,23 +40,19 @@
       <div class="bg-watsons-smoke/30 divide-y text-watsons-graphene text-sm">
         <div class="flex items-center justify-end gap-4 p-4 font-medium">
           <span>My profile</span>
-          <!-- <i class="far fa-user"></i> -->
-          <Store />
+          <User />
         </div>
         <div class="flex items-center justify-end gap-4 p-4 font-medium">
           <span>Order history</span>
-          <!-- <i class="fas fa-shopping-bag"></i> -->
-          <Store />
+          <History />
         </div>
         <div class="flex items-center justify-end gap-4 p-4 font-medium">
           <span>Help center</span>
-          <!-- <i class="far fa-question-circle"></i> -->
-          <Store />
+          <HelpCenter />
         </div>
         <div class="flex items-center justify-end gap-4 p-4 font-medium">
           <span>Log out</span>
-          <!-- <i class="fas fa-sign-out-alt"></i> -->
-          <Store />
+          <Logout />
         </div>
       </div>
 
@@ -68,7 +62,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Store } from '@/assets/icons'
+import { Close, ArrowLeft, User, History, HelpCenter, Logout } from '@/assets/icons'
 
 interface MenuItem {
   key: string

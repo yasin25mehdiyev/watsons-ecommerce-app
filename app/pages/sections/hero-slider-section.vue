@@ -5,15 +5,15 @@
     <!-- LEFT ARROW -->
     <button @click="prev" class="hidden md:flex absolute left-11 top-1/2 -translate-y-1/2 z-30
              w-12 h-12 items-center justify-center
-             text-watsons-graphene/80 hover:text-watsons-graphene">
-      <Store class="text-2xl" />
+             text-watsons-graphene/80 hover:text-watsons-graphene cursor-pointer">
+      <ArrowLeft :width=48 :height=48 />
     </button>
 
     <!-- RIGHT ARROW -->
     <button @click="next" class="hidden md:flex absolute right-11 top-1/2 -translate-y-1/2 z-30
              w-12 h-12 items-center justify-center
-             text-watsons-graphene/80 hover:text-watsons-graphene">
-      <Store class="text-2xl rotate-180" />
+             text-watsons-graphene/80 hover:text-watsons-graphene cursor-pointer">
+      <ArrowRight :width=48 :height=48 />
     </button>
 
     <div class="max-w-7xl mx-auto py-12 md:py-16">
@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { Store } from '@/assets/icons'
+import { ArrowLeft, ArrowRight } from '@/assets/icons'
 import slideImage from '@/assets/image/slider/slider-right.png'
 
 interface Slide {

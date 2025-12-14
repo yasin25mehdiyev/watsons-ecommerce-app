@@ -8,11 +8,12 @@
 
       <div class="hidden md:flex items-center justify-center max-w-2xl">
         <div class="relative">
-          <!-- <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-watsons-grey/40"></i> -->
-          <Store class="absolute left-4 top-1/2 -translate-y-1/2 text-watsons-grey/40" />
+          <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+            <Search className="text-watsons-grey/40" />
+          </div>
 
           <input type="text" placeholder="Write the product or category you are looking for" class="bg-watsons-smoke/30 min-w-[560px] min-h-[42px]
-              pl-10 pr-4 border border-watsons-smoke/30 rounded-[32px]
+              pl-11 pr-4 border border-watsons-smoke/30 rounded-[32px]
               focus:outline-none focus:border-watsons-grey text-sm" />
         </div>
       </div>
@@ -30,23 +31,20 @@
             </div>
 
             <span>
-              <!-- <i class="fas fa-chevron-down text-watsons-grey/40 text-sm"></i> -->
-              <Store class="text-watsons-grey/40 text-sm" />
+              <ArrowDown class="text-watsons-grey/40 text-sm" />
             </span>
           </div>
 
           <button class="md:hidden text-watsons-graphene text-lg">
-            <!-- <i class="fas fa-search"></i> -->
-            <Store />
+            <Search />
           </button>
 
           <div class="relative">
-            <NuxtLink to="/checkout" class="relative inline-block">
-              <!-- <i class="fas fa-shopping-cart text-lg text-watsons-graphene"></i> -->
-              <Store class="text-lg text-watsons-graphene" />
+            <NuxtLink to="/checkout" class="relative inline-flex items-center justify-center">
+              <Basket class="text-watsons-graphene" />
 
               <span class="absolute -top-2 -right-2 bg-watsons-error text-white font-bold
-                  text-[12px] w-4 h-4 rounded-[40px] flex items-center justify-center">
+      text-[12px] w-4 h-4 rounded-[40px] flex items-center justify-center">
                 2
               </span>
             </NuxtLink>
@@ -54,7 +52,7 @@
         </div>
 
         <button class="md:hidden text-gray-600 text-xl" @click="openMobileMenu">
-          <Store />
+          <Menu />
         </button>
       </div>
     </div>
@@ -64,7 +62,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Store } from '@/assets/icons'
+import { Search, ArrowDown, Basket, Menu } from '@/assets/icons'
 import logoImage from '@/assets/image/logo.png'
 import userImage from '@/assets/image/user.jpg'
 import MobileNavigation from '@/components/layout/navbar/mobile-navbar.vue'

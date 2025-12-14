@@ -16,23 +16,20 @@
 
       <ul class="space-y-4 text-sm text-watsons-graphene">
         <li class="flex gap-3">
-          <!-- <i class="fas fa-map-marker-alt mt-1" /> -->
-          <Store class="mt-1" />
+          <Location class="mt-1 shrink-0" />
           <span>
             Saray Mah. Site Yolu Cad. Anel İş Merkezi, D:No:5/4,
             34768 Ümraniye/İstanbul
           </span>
         </li>
 
-        <li class="flex gap-3">
-          <!-- <i class="fas fa-phone" /> -->
-          <Store />
+        <li class="flex items-center gap-3">
+          <Mobile class="shrink-0" />
           <a href="tel:08507559987">0850 755 9987</a>
         </li>
 
-        <li class="flex gap-3">
-          <!-- <i class="fas fa-envelope" /> -->
-          <Store />
+        <li class="flex items-center gap-3">
+          <Envelope class="shrink-0" />
           <a href="mailto:info@watsons.com.tr">info@watsons.com.tr</a>
         </li>
       </ul>
@@ -42,6 +39,6 @@
 </template>
 
 <script setup lang="ts">
-import { Store } from '@/assets/icons';
+import { Location, Mobile, Envelope } from '@/assets/icons';
 import FooterColumn from './footer-column.vue'
 </script>
